@@ -7,7 +7,7 @@ local dpad = {l = 47, r= 51, u= 27, d= 19, a= 21, b= 45, y= 23, x= 22, lt = 10, 
 
 local cfg = {
 	on = true,				--<	Use this script?
-	amt = 1,			--<	Amount of tyres popped until vehicle stops ( "all", "half", "3/4", "quarter", 1, 2, 3, 4, 5, 6)
+	amt = "all",			--<	Amount of tyres popped until vehicle stops ( "all", "half", "3/4", "quarter", 1, 2, 3, 4, 5, 6)
 	timer = nil,			--< Add a timer before vehicle stops. (timed by 100, timer will increase 1 per frame until it reaches value) (nil or 0+)
 	hazards = false, 		--<	Enable hazard lights once vehicle is disabled (turn signals)
 	breakEngine = true,		--<	Set engine health to 0.0 once tyres have popped. (will start to decrease if you crash) 
@@ -21,7 +21,7 @@ local cfg = {
 	mPwd = "password2",		--<	Password to login as a mechanic.
 	
 	test = {
-		on = true,			--<	Activate testing mode (Pops tyres one by one and then repairs them in a loop)
+		on = false,			--<	Activate testing mode (Pops tyres one by one and then repairs them in a loop)
 		cmd = "pop",		--< Command to pop a tyre
 		but = dpad.a,		--<	Button to press to pop a tyre (Controller) --See dpad at very top of script.
 		dbug = false,		--<	Show tyre info on screen.
