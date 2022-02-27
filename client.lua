@@ -1,7 +1,7 @@
 local dpad = {l = 47, r= 51, u= 27, d= 19, a= 21, b= 45, y= 23, x= 22, lt = 10, rt = 11, lb = 37, rb = 44, lu = 32, ld = 33, ll = 34, lr = 35, l3 = 36, rl = 5, rr = 6, ru = 3, rd = 4, r3 = 7, start = 199, sel = 0}	--Updated 29/4/20
 
 --	By StaceyBee
---	Version : 1.0.4
+--	Version : 1.1.1
 --	Update : 27/02/2022
 --	Info: Force vehicle to stop when tyres have popped.
 
