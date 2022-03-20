@@ -62,6 +62,8 @@ Unique:						--Add vehicles with a unique amount of tyres. (id = veh-hash, wh = 
 						--For example the "Raptor" has 2 wheels on the front and 1 wheel on back.
 					
 Except:						--Blacklisted vehicles that cant be stopped if tyres are popped. By default cop cars are ignored.
+						--Numbers will ignore the whole vehicle class (example: 14 will ignore all boats)
+						--Strings will ignore the specific vehicles (example: "fbi" will ignore the FBI car)
 
 Test:						--Enable test/debug mode. (enables you to pop tyres one by one and then reset)
 On:						--Activate test mode.
