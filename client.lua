@@ -1,8 +1,8 @@
 local dpad = {l = 47, r= 51, u= 27, d= 19, a= 21, b= 45, y= 23, x= 22, lt = 10, rt = 11, lb = 37, rb = 44, lu = 32, ld = 33, ll = 34, lr = 35, l3 = 36, rl = 5, rr = 6, ru = 3, rd = 4, r3 = 7, start = 199, sel = 0}	--Updated 29/4/20
 
 --	By StaceyBee
---	Version : 1.1.1
---	Update : 27/02/2022
+--	Version : 1.1.2
+--	Update : 20/03/2022
 --	Info: Force vehicle to stop when tyres have popped.
 
 local cfg = {
@@ -55,8 +55,8 @@ local cfg = {
 		{id = "RAPTOR", wh = {0, 1, 4}}			--This has 2 wheels on front and one wheel on back.
 	},
 	except = {				--<	Blacklisted vehicles that cant be stopped if tyres are popped.
+		14, 15,				--Numbers will ignore the whole vehicle classes and strings will ignore specific vehicles (example: 14 ignores boats, "fbi" ignores the fbi car)
 		"fbi", "fbi2", "police", "police2", "police3", "police4", "policeb", "policeold1", "policeold2", "policet", "pranger", "riot", "riot2", "sheriff", "sheriff2",
-		"dinghy","dinghy2","dinghy3","dinghy4","jetmax","marquis","seashark","seashark2","seashark3","speeder","speeder2","squalo", "submersible","submersible2","suntrap","toro","toro2","tropic","tropic2","tug","avisa","dinghy5","kosatka","longfin","patrolboat"
 	},
 	ev = {"handbrake", "engine", "fire", "traction"},												--Normal events to pick at random (add and remove events as you please)
 	evf = {"handbrake", "engine", "fire", "explode", "traction", "launch", "gravity", "crash"},		--Normal + fun events to pick at random.
@@ -95,10 +95,18 @@ Citizen.CreateThread(function()
 				local id = GetEntityModel(veh)
 				local nam = GetDisplayNameFromVehicleModel(id)
 				local mx = GetVehicleNumberOfWheels(veh)
+				local class = GetVehicleClass(veh)
 				local found = false
 				for q1, exc in pairs(cfg.except) do
-					if exc == nam then
-						found = true
+					local strfind = string.find(exc, "str" )
+					if strfind == true then
+						if exc == nam then
+							found = true
+						end
+					else
+						if exc == class then
+							found = true
+						end
 					end
 				end
 				if found == false then
