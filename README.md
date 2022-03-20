@@ -42,7 +42,7 @@ Event:						--What to do once the tyres are popped.
 	--"custom":				Edit cfg.custom below to add custom functions.
 	
 Custom:						--An easy way for users to add their own events without having to edit the base script.
-						--Remove the --[[ & --]] from the custom lines to use custom functions. If you are adding more than one dont forget to put a..							--..comma between the functions after the }. Custom functiions will be chosen at random if there is more than one.
+						--Remove the --[[ & --]] from the custom lines to use custom functions. If you are adding more than one dont forget to 							put a comma between the functions after the }. Custom functiions will be chosen at random if there is more than one.
 
 Timer:						--Add a timer before vehicle stops. (multiplied by 100, timer will increase 1 per frame until it reaches value) (nil or 0+)	
 Breakable Engine:				--Set engine health to 0.0 once tyres have popped. (will start to decrease if you crash) 
@@ -61,7 +61,7 @@ mPwd:						--Password to sign in as an mechanic. (ex: /tymech password2)
 Unique:						--Add vehicles with a unique amount of tyres. (id = veh-hash, wh = wheel-ID's)
 						--For example the "Raptor" has 2 wheels on the front and 1 wheel on back.
 					
-Except:						--Blacklisted vehicles that cant be stopped if tyres are popped. By default cop cars are ignored.
+Except:						--Blacklisted vehicles that cant be stopped if tyres are popped. By default cop cars, boats and helicopters are ignored.
 						--Numbers will ignore the whole vehicle class (example: 14 will ignore all boats)
 						--Strings will ignore the specific vehicles (example: "fbi" will ignore the FBI car)
 
