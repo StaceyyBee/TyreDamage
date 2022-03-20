@@ -111,6 +111,7 @@ NOTE: Type /tyi in chat to see all commands in console. (you have to be admin to
 		  -	Script will now calculate when vehicles dont exist correctly.
 		  -	Script will no longer break when using a vehicle with strange amount of wheels (3 or 5 or whatever)
 
+1.1.2 (20.3.22) - Added class detector to ignore specific classes.
 
 
 	   
