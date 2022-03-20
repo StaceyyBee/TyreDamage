@@ -46,9 +46,9 @@ local cfg = {
 		{func = function()
 			local me = GetPlayerPed(-1)
 			local veh = GetVehiclePedIsIn(me, 0)
-			-->>Add events here<<<--
+			-->>Add event here<<<--
 		end}
-	--]]					--<	Delete this line if you want to use template above.
+	--]]					--<	Delete this line if you want to use template above, put a comma after .
 	},
 
 	unique = {				--<	Vehicles with unique amount of wheels. (id: Veh hash, wh: Wheel ID's assigned to vehicle)
@@ -252,8 +252,6 @@ Citizen.CreateThread(function()
 									if all.done == false then
 										if all.tim > 0 then
 											all.tim = all.tim - 1
-											omg("~n~~n~~n~~n~~n~~n~Timer: "..all.tim, 0.5, 0.9, 0.5, 1)
-											notify("Timer")
 										else
 											if all.ev == "engine" then if GetIsVehicleEngineRunning(all.v) then SetVehicleEngineOn(all.v, false, 1, 1) end
 											elseif all.ev == "explode" then
