@@ -47,7 +47,6 @@ local cfg = {
 			local me = GetPlayerPed(-1)
 			local veh = GetVehiclePedIsIn(me, 0)
 			-->>Add events here<<<--
-			notify("Cust")
 		end}
 	--]]					--<	Delete this line if you want to use template above.
 	},
@@ -56,7 +55,8 @@ local cfg = {
 		{id = "RAPTOR", wh = {0, 1, 4}}			--This has 2 wheels on front and one wheel on back.
 	},
 	except = {				--<	Blacklisted vehicles that cant be stopped if tyres are popped.
-		"fbi", "fbi2", "police", "police2", "police3", "police4", "policeb", "policeold1", "policeold2", "policet", "pranger", "riot", "riot2", "sheriff", "sheriff2"			--Just delete this line if you dont want any, or change accordingly.
+		"fbi", "fbi2", "police", "police2", "police3", "police4", "policeb", "policeold1", "policeold2", "policet", "pranger", "riot", "riot2", "sheriff", "sheriff2",
+		"dinghy","dinghy2","dinghy3","dinghy4","jetmax","marquis","seashark","seashark2","seashark3","speeder","speeder2","squalo", "submersible","submersible2","suntrap","toro","toro2","tropic","tropic2","tug","avisa","dinghy5","kosatka","longfin","patrolboat"
 	},
 	ev = {"handbrake", "engine", "fire", "traction"},												--Normal events to pick at random (add and remove events as you please)
 	evf = {"handbrake", "engine", "fire", "explode", "traction", "launch", "gravity", "crash"},		--Normal + fun events to pick at random.
